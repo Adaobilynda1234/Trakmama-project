@@ -1,11 +1,18 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold text-center text-blue-500">
-        Trakmama!
-      </h1>
+      <Navbar />
+      {/* defining react-router path */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
     </>
   );
 }
