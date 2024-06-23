@@ -1,7 +1,11 @@
 import React, { useState } from 'react'; // Import React and useState hook
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai"; // Import menu icons
 import { NavLink } from 'react-router-dom';
-import  '..assets/heroDoImage.png';
+import logo from '../assets/logo.png';
+import { FaBell } from "react-icons/fa";
+import { CiGlobe } from "react-icons/ci";
+
+
 
 
 const Navbar = () => {
@@ -16,23 +20,15 @@ const Navbar = () => {
     return (
         <>
             {/* Main Navigation Bar */}
-            <nav className='bg-white text-black w-full flex justify-between items-center h-16 mx-auto px-5'>
-                
-                {/* Logo */}
-                <h1 className='text-[27px] '></h1>
-                <ul>
-                      
-    
-                </ul>
+            <nav className=' bg-[#f0fdf4]  text-black   flex justify-between items-center h-16 mx-auto px-5 '>
+                                    {/* Logo */}     
+                    <div className='hidden md:flex space-x-6'>
 
-               
-                
-                {/* Desktop Navigation Links */}
-                <ul className='hidden md:flex space-x-6'>
-                    <img  src="/assets/heroDoImage.png" alt="logo" />
-
-                   <li> <NavLink to={"/"}> Home </NavLink> </li>
-
+                    <img   className= 'w-13 h-14' src={logo}alt="logo" />
+</div>                            
+                                                     
+         {/* Any other navbar elements */}    
+                       
                  <form className='max-w-sm px-4'> 
                   <div className='relative'> 
                     <svg xmlns='http://www.w3.or/2000/svg' className='absolute top-0 bottom-0 w-6 h-6 my-auto
@@ -42,22 +38,27 @@ const Navbar = () => {
 
                     </svg>
 <input type='text' placeholder='Search or Ask AI Doctor'
-className='w-full py-3 pl-12 pr-4 text-[#7eb97d] border rounded-md outline-none
+className='w-full py-2 pl-9 pr-9 text-[#7eb97d] border rounded-md outline-none
  bg-[#f9d9f4] focus:bg-#4ade80[] focus:border-[#4ade80]'
 />
 
+
                   </div>
                  </form>
-                    
+                 <div>
+                 <CiGlobe className="text-4xl"/> 
+                 </div>
+                
+
+                 <FaBell className="text-3xl ml-" />
                    
-                </ul>
-              
+                             
                 {/* Desktop Buttons */}
                 <div className='hidden md:flex space-x-4'>
                     <button className='bg-[#7eb97d] px-4 py-2 text-[#d8d0d4] font-bold rounded-md border-2 
                      border-[#fdf4ff] shadow-2xl  shadow-green-50  '>Sign Up</button>
 
-                    <button className='bg-[#ffffff] px-4 py-2 text-[#bc69b5] font-bold rounded-md
+                    <button className='bg-[#ffffff] px-4 py-1 text-[#bc69b5] font-bold rounded-md
                      border-2 border-[#bc69b5] shadow-2xl shadow-[#c0dfbf]'>Log In</button>
                 </div>
                 
