@@ -32,7 +32,7 @@ return (
                    <li> <NavLink to={"/about-us"}> About Us </NavLink> </li>
                     <li><NavLink to={"/contact-us"}> Contact Us </NavLink></li>
                     <li><NavLink to={"/blogs"}> Blogs </NavLink></li>  
-        <div className="flex flex-row-reverse space-x-4 space-x-reverse  text-black" >                 
+        <div className="flex flex-row-reverse space-x-4 space-x-reverse pt-2 text-black" >                 
 
                    <NavLink to={"/notification"}>  <FaBell  />  </NavLink> 
                    <NavLink to={"/website"}> <CiGlobe />  </NavLink>  
