@@ -26,23 +26,22 @@ const Navbar = () => {
                     <img   className= 'w-13 h-14 ml-12' src={logo}alt="logo" />
                             
                    {/* Desktop Navigation Links */}
-                <ul className='  text-green-400g hidden md:flex space-x-14'>
+                <ul className='  text-green-400g font-semibold hidden md:flex space-x-14'>
 
                    <li> <NavLink to={"/"}> Home </NavLink> </li>
                    <li> <NavLink to={"/about-us"}> About Us </NavLink> </li>
                     <li><NavLink to={"/contact-us"}> Contact Us </NavLink></li>
                     <li><NavLink to={"/blogs"}> Blogs </NavLink></li>  
                       </ul> 
+                  {/* Any other navbar elements */}
 
-                   <NavLink to={"/websitete"}> <CiGlobe />  </NavLink>  
+                   <NavLink to={"/website"}> <CiGlobe />  </NavLink>  
 
                    <NavLink to={"/notification"}>  <FaBell  />    </NavLink>
                                                                
-         {/* Any other navbar elements */}                     
-                      
+                                    
                         
-                       
-                               
+                                                 
                                               
                  
                  
