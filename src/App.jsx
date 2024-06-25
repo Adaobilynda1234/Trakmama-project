@@ -5,6 +5,9 @@ import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import ErrorPage from "./pages/ErrorPage";
+import Header from "./components/Header";
+import PricingSection from "./components/PricingSection";
+import './styles/global.css'; // Import your global CSS file
 
 function App() {
   return (
@@ -17,6 +20,15 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
+      <div>
+            <Header />
+            <div>
+              <br/>
+               <h5 style={{margin: '0 auto', textAlign:'center', fontWeight:'bold'}} className="example-text">Pricing/Payment Plan</h5>
+               <br/>
+              </div>
+            <PricingSection />
+        </div>
     </>
   );
 }
