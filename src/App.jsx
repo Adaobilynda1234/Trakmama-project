@@ -5,9 +5,7 @@ import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import ErrorPage from "./pages/ErrorPage";
-import Header from "./components/Header";
-import PricingSection from "./components/PricingSection";
-import './styles/global.css'; // Import your global CSS file
+
 
 function App() {
   return (
