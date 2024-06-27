@@ -5,12 +5,16 @@ import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import ErrorPage from "./pages/ErrorPage";
+import Articles from "./components/articles";
+import OurTools from "./components/ourtools";
 
 function App() {
   return (
     <>
       <Navbar />
       {/* defining react-router path */}
+      <Articles />
+      <OurTools />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<SignUp />} />
