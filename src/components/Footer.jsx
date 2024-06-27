@@ -1,4 +1,4 @@
-//import React from 'react'
+import React from 'react'
 import logo2 from '../assets/logo2.png';
 
 const Footer = ()=>{
