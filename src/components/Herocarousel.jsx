@@ -1,6 +1,6 @@
 import React from "react";
-//import { Carousel } from "react-responsive-carousel";
-//import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Groupimage from "../assets/Group 79.png";
 import PregnancyImage from "../assets/Pregnancy stages-pana 1.png";
 
