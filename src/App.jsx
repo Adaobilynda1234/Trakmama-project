@@ -23,8 +23,9 @@ function App() {
       <div>
             <Header />
             <div>
+              <br/> 
               <br/>
-               <h5 style={{margin: '0 auto', textAlign:'center', fontWeight:'bold'}} className="example-text">Pricing/Payment Plan</h5>
+               <h5 style={{margin: '0 auto', textAlign:'center', fontWeight:'bold', fontSize:'23px'}} className="example-text">Pricing/Payment Plan</h5>
                <br/>
               </div>
             <PricingSection />
