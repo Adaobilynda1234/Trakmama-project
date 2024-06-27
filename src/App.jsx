@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Navbar />
-
+      {/* defining react-router path */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<SignUp />} />
