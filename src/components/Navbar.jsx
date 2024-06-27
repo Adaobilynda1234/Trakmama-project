@@ -20,7 +20,11 @@ const Navbar = () => {
 return (
         <>
             {/* Main Navigation Bar */}
+<<<<<<< HEAD
   <nav className=' bg-[#d0f3cc]  text-green-400   flex justify-between items-center  h-20 mx-auto px-12 '>
+=======
+  <nav className=' bg-[#f0fdf4]  text-green-400   flex justify-between items-center  h-20 mx-auto px-12 '>
+>>>>>>> 66028c46c55f1b80fe0413384cf436c87f0e9ab2
                                   
                                     {/* Logo */}                                                        
         <img   className= 'w-13 h-14 ml-12' src={logo}alt="logo" />
