@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
+import SignupForm from "./pages/SignupForm";
 import ErrorPage from "./pages/ErrorPage";
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
       {/* defining react-router path */}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/signup" element={<SignUp />} />
+        <Route path="/signup" element={<SignupForm />} />
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
