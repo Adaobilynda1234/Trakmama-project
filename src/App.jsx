@@ -5,7 +5,8 @@ import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import ErrorPage from "./pages/ErrorPage";
-
+// import Articles from "./components/articles";
+// import OurTools from "./components/ourtools";
 
 function App() {
   return (
