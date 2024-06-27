@@ -29,11 +29,11 @@ const OurTools = () => {
     return (
         <section className="py-16 mx-16 my-8 bg-tools-bg rounded-lg lg:mx-32">
             <h2 className="text-2xl font-medium mb-4 text-center">Our Tools</h2>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex  flex-col md:flex-row md:flex-wrap md:justify-center gap-4">
             {tools.map((tool, index) => (
                 <div key={index} className=" flex flex-col items-center">
-                   <img src={tool.image} alt={tool.name} className="h-28 mb-2" />
-                    <p className="text-center text-sm font-light">{tool.name}</p>
+                   <img src={tool.image} alt={tool.name} className="h-28 lg:h-36 mb-2" />
+                    <p className="text-center text-sm lg:text-[1.2rem] font-light">{tool.name}</p>
                 </div>
             ))}
             </div>

@@ -19,12 +19,12 @@ const articles = [
 
     {
         title: "When Can You Find Out Your Baby Sex",
-        image: './images/whattoeat.png'
+        image: './images/findoutbabysex.png'
     },
 
     {
         title: "How Important Is Exercising",
-        image: './Images/howimportantisexercising.png'
+        image: './images/howimportantisexercising.png'
     },
 
 
