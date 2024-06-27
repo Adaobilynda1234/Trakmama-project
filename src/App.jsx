@@ -6,7 +6,6 @@ import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import ErrorPage from "./pages/ErrorPage";
 
-
 function App() {
   return (
     <>
@@ -18,16 +17,6 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
-      <div>
-            <Header />
-            <div>
-              <br/> 
-              <br/>
-               <h5 style={{margin: '0 auto', textAlign:'center', fontWeight:'bold', fontSize:'23px'}} className="example-text">Pricing/Payment Plan</h5>
-               <br/>
-              </div>
-            <PricingSection />
-        </div>
     </>
   );
 }

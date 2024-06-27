@@ -3,8 +3,9 @@ import Herocarousel from "../components/Herocarousel";
 import Article from "../components/articles";
 import Ourtools from "../components/ourtools";
 import Review from "../components/Review";
-import Articles from "../components/articles";
-import OurTools from "../components/ourtools";
+import Header from "../components/Header";
+import PricingSection from "../components/PricingSection";
+import "../styles/global.css";
 
 const Home = () => {
   return (
@@ -14,6 +15,24 @@ const Home = () => {
       <Ourtools />
       {/* <h1 className="text-center">this is home page</h1> */}
       <Review />
+      <Header />
+      <div>
+        <br />
+        <br />
+        <h5
+          style={{
+            margin: "0 auto",
+            textAlign: "center",
+            fontWeight: "bold",
+            fontSize: "23px",
+          }}
+          className="example-text"
+        >
+          Pricing/Payment Plan
+        </h5>
+        <br />
+      </div>
+      <PricingSection />
     </div>
   );
 };
