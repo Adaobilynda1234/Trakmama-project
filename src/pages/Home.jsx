@@ -1,4 +1,5 @@
 import React from "react";
+
 import Herocarousel from "../components/Herocarousel";
 import Article from "../components/articles";
 import Ourtools from "../components/ourtools";
@@ -7,9 +8,11 @@ import Header from "../components/Header";
 import PricingSection from "../components/PricingSection";
 import "../styles/global.css";
 
+
 const Home = () => {
   return (
     <div>
+
       <Herocarousel />
       <Article />
       <Ourtools />
@@ -34,7 +37,8 @@ const Home = () => {
       </div>
       <PricingSection />
     </div>
-  );
-};
+  )
 
-export default Home;
+}
+
+export default Home
