@@ -7,7 +7,3 @@ export const ContactUs = () => {
     </div>
   );
 };
-<<<<<<< HEAD
-=======
-
->>>>>>> 66028c46c55f1b80fe0413384cf436c87f0e9ab2

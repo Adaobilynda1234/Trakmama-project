@@ -5,10 +5,10 @@ import React from "react";
 const Home = () => {
   return (
     <div>
-      {/*<Herocarousel />*/}
+      {/* <Herocarousel /> */}
 
        <h1 className="text-center">this is home page</h1>
-      {/* <Review /> */}
+     {/* <Review />  */}
     </div>
   )
 
