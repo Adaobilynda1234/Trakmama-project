@@ -17,7 +17,7 @@ import {Blogs} from "./pages/BlogsPage"
 
 function App() {
   return (
-    <container>
+    <>
       <Navbar />
       {/* defining react-router path */}
       <Routes>
@@ -32,7 +32,7 @@ function App() {
          <Route path= "blogs" element ={<Blogs title Blogs/> }/>
               </Routes>  
               <Footer/>
-                  </container>
+             </>    
   );
 }
 
