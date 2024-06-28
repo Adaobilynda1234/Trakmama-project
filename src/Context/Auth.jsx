@@ -1,26 +1,38 @@
-import React, { createContext, useState, useContext, useEffect } from "react";
-// import axios from "axios";
+import React, { createContext, useState, useEffect } from "react";
+import { toast } from "react-toastify";
 
-const AuthContext = createContext();
+export const AuthContext = createContext();
 
-export const AuthProvider = ({ children }) => {
+const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(() => {
-    const storedUser = localStorage.getItem("user");
-    return storedUser ? JSON.parse(storedUser) : null;
+    const savedUser = localStorage.getItem("user");
+    return savedUser ? JSON.parse(savedUser) : null;
   });
+
+  useEffect(() => {
+    const savedUser = localStorage.getItem("user");
+    if (savedUser) {
+      setUser(JSON.parse(savedUser));
+    }
+  }, []);
 
   const login = async (email, password) => {
     try {
-      const response = await axios.post("YOUR_API_URL", {
-        email,
-        password,
+      const response = await fetch("/api/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
       });
 
-      const data = response.data;
+      if (!response.ok) {
+        throw new Error("Login failed!");
+      }
+
+      const data = await response.json();
       setUser(data.user);
       localStorage.setItem("user", JSON.stringify(data.user));
     } catch (error) {
-      throw new Error("Login failed");
+      toast.error(error.message);
     }
   };
 
@@ -29,18 +41,31 @@ export const AuthProvider = ({ children }) => {
     localStorage.removeItem("user");
   };
 
-  useEffect(() => {
-    const storedUser = localStorage.getItem("user");
-    if (storedUser) {
-      setUser(JSON.parse(storedUser));
+  const signup = async (userData) => {
+    try {
+      const response = await fetch("/api/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(userData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Signup failed");
+      }
+
+      const data = await response.json();
+      setUser(data.user);
+      localStorage.setItem("user", JSON.stringify(data.user));
+    } catch (error) {
+      toast.error(error.message);
     }
-  }, []);
+  };
 
   return (
-    <AuthContext.Provider value={{ user, login, logout }}>
+    <AuthContext.Provider value={{ user, login, logout, signup }}>
       {children}
     </AuthContext.Provider>
   );
 };
 
-export const useAuth = () => useContext(AuthContext);
+export default AuthProvider;
