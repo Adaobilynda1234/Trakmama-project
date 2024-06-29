@@ -71,8 +71,10 @@ const Signup = () => {
           <button className="w-full py-2 px-4 mb-4 border border-black rounded-lg flex items-center justify-center">
             Continue with <FaGoogle className="w-5 h-5 ml-4" />
           </button>
-          <div className="my-4 border-b text-center">
-            <span className="px-2 bg-white ">or</span>
+          <div className="flex items-center my-4">
+            <div className="flex-grow border-t"></div>
+            <span className="mx-4">OR</span>
+            <div className="flex-grow border-t"></div>
           </div>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
@@ -139,7 +141,7 @@ const Signup = () => {
               )}
               <p className="text-sm text-gray-600 mt-1">
                 Don't know my due date?{" "}
-                <a href="/calculate-due-date" className="text-blue-500">
+                <a href="/calculate-due-date" className="text-[#B252AA]">
                   Calculate due date
                 </a>
               </p>
