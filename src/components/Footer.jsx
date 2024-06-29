@@ -11,11 +11,15 @@ const Footer = ()=>{
             <footer className="  bg-[#d0f3cc]  text-black   ">
   <div className="sm:px-12 pt-1 h-full"> 
      <div className="grid  grid-cols-1 gap-4 md:grid-cols-2 justify-end ">
-      <div>
-    <img src={logo2} alt="logo-ct" className="  h-21 ml-11 w-30 pt-11" />  
-    <article className=" grid grid-cols-2  justify-center  gap-2 md:grid-cols-3 pt-6 py-8 my-4 pl-6 ">
-       <p>We are dedicated to simplifying your pregnancy journey with amazing features. </p>
-         </article>
+      <div className='flex flex-col items-center md:grid-cols-3 font-serif'>
+    <img src={logo2} alt="logo-ct" className="  w-30 h-21 ml-11 pt-11" />  
+    
+       <p className='mt-4 md:col-span-3 text-center'>
+       <span className='block'>We are dedicated to</span>
+       <span className='block'>simplifying your pregnancy </span>
+       <span className='block'>journey with amazing features.</span>
+        </p>
+        
     </div>
       <div className="grid justify-between grid-cols-2 gap-4 pt-11 pb-0">
         <ul >          
