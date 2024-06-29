@@ -14,7 +14,7 @@ const Footer = ()=>{
       <div className='flex flex-col items-center md:grid-cols-3 font-serif'>
     <img src={logo2} alt="logo-ct" className="  w-30 h-21 ml-11 pt-11" />  
     
-       <p className='mt-4 md:col-span-3 text-center'>
+       <p className='mt-4 md:col-span-3 text-center font-sans'>
        <span className='block'>We are dedicated to</span>
        <span className='block'>simplifying your pregnancy </span>
        <span className='block'>journey with amazing features.</span>
@@ -141,8 +141,8 @@ const Footer = ()=>{
         </a>
        
         <a href="#"
-          className="block font-sans  text-base antialiased font-light leading-relaxed transition-opacity text-inherit opacity-80 hover:opacity-100">
-         <LuYoutube className='w-6 h-6  text-[#c62828]'/>
+          className="block font-sans  text-base antialiased font-light leading-relaxed transition-opacity text-red-800 opacity-80 hover:opacity-100">
+         <LuYoutube className='w-6 h-6  text-[#b71c1c]'/>
               
         </a>
 
