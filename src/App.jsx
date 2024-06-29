@@ -19,7 +19,7 @@ import LoginForm from "./pages/LoginForm";
 function App() {
   return (
     <>
-      {/* <Navbar /> */}
+       <Navbar /> 
       {/* defining react-router path */}
       <Routes>
         <Route path="/" element={<Home />} />
@@ -32,7 +32,7 @@ function App() {
         <Route path="website" element={<Website title CiGlobe />} />
         <Route path="blogs" element={<Blogs title Blogs />} />
       </Routes>
-      {/* <Footer/> */}
+      { <Footer/> }
     </>
   );
 }
