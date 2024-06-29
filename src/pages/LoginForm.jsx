@@ -1,17 +1,19 @@
 import React, { useState, useContext } from "react";
-// import { AuthContext } from "./AuthContext";
+import { AuthContext } from "../Context/Auth";
 import { FaGoogle, FaEye, FaEyeSlash } from "react-icons/fa";
 import LoginImg from "../assets/cuate.png";
 import Loginlogo from "../assets/Traklogo.png";
-// import { toast } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
-  //   const { login } = useContext(AuthContext);
+  const { login } = useContext(AuthContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({});
+  const navigate = useNavigate();
 
   const validateForm = () => {
     const errors = {};
@@ -32,7 +34,7 @@ const Login = () => {
       return;
     }
 
-    // await login(email, password);
+    await login(email, password, () => navigate("/dashboard"));
   };
 
   return (
@@ -121,6 +123,7 @@ const Login = () => {
           </p>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

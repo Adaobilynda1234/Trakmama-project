@@ -1,15 +1,13 @@
-// src/components/Signup.jsx
 import React, { useContext, useState } from "react";
-// import { AuthContext } from "../context/AuthContext";
-// import { ToastContainer, toast } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
+import { AuthContext } from "../Context/Auth";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import pregnancyimg from "../assets/Pregnancy test-rafiki 1.png";
 import Signuplogo from "../assets/Traklogo.png";
-// src/components/Signup.jsx
 import { FaGoogle, FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Signup = () => {
-  //   const { signup } = useContext(AuthContext);
+  const { signup } = useContext(AuthContext);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -43,7 +41,7 @@ const Signup = () => {
     if (Object.keys(formErrors).length > 0) {
       setErrors(formErrors);
     } else {
-      //   signup(formData);
+      signup(formData);
     }
   };
 
@@ -170,7 +168,7 @@ const Signup = () => {
           </p>
         </div>
       </div>
-      {/* <ToastContainer /> */}
+      <ToastContainer />
     </div>
   );
 };
