@@ -141,7 +141,7 @@ const Footer = ()=>{
         </a>
        
         <a href="#"
-          className="block font-sans  text-base antialiased font-light leading-relaxed transition-opacity text-red-800 opacity-80 hover:opacity-100">
+          className="block font-sans  text-base antialiased font-light leading-relaxed transition-opacity text-red-800  opacity-80 hover:opacity-100">
          <LuYoutube className='w-6 h-6  text-[#b71c1c]'/>
               
         </a>
