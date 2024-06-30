@@ -5,11 +5,13 @@ import Ourtools from "../components/ourtools";
 import Review from "../components/Review";
 import Articles from "../components/articles";
 import OurTools from "../components/ourtools";
+import WhyChooseUs from "../components/whychooseus";
 
 const Home = () => {
   return (
     <div>
       <Herocarousel />
+      <WhyChooseUs />
       <Article />
       <Ourtools />
       {/* <h1 className="text-center">this is home page</h1> */}
