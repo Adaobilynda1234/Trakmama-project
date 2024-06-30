@@ -70,10 +70,10 @@ return (
                     
                     {/* Mobile Navigation Links */}
                     <ul className='block space-y-4 pt-8'>
-                        <li className='border-b border- [#bc69b5]'> <NavLink to={"/"}> Home </NavLink>  </li>
-                        <li className='border-b border-[#fdf4ff]'> <NavLink to={"/about-us"}> About Us </NavLink>  </li>
-                        <li className='border-b border-[#fdf4ff]'> <NavLink to={"/blogs"}> Blogs </NavLink> </li>
-                        <li className='border-b border-[#fdf4ff]'> <NavLink to={"/contact-us"}> Contact Us </NavLink> </li>
+                        <li className='border-b border-[#d0f3cc] text-black font-sans'> <NavLink to={"/"}> Home </NavLink>  </li>
+                        <li className='border-b border-[#d0f3cc] text-black font-sans'> <NavLink to={"/about-us"}> About Us </NavLink>  </li>
+                        <li className='border-b border-[#d0f3cc] text-black font-sans' > <NavLink to={"/blogs"}> Blogs </NavLink> </li>
+                        <li className='border-b border-[#d0f3cc] text-black font-sans'> <NavLink to={"/contact-us"}> Contact Us </NavLink> </li>
                     </ul>
                     
                     {/* Mobile Buttons */}
