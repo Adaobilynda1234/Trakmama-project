@@ -22,16 +22,18 @@ const AuthProvider = ({ children }) => {
   const login = async (email, password, onSuccess) => {
     try {
       const response = await fetch(
-        "https://trakmama-backend.onrender.com/api/users/login",
+        "https://trakmama-backend.onrender.com/v1/api/users/login",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email, password }),
         }
       );
+      console.log("Response:", response);
 
       if (!response.ok) {
-        throw new Error("Login failed!");
+        const errorData = await response.json();
+        throw new Error(errorData.message || "Login failed!");
       }
 
       const data = await response.json();
@@ -52,7 +54,7 @@ const AuthProvider = ({ children }) => {
   const signup = async (userData) => {
     try {
       const response = await fetch(
-        "https://trakmama-backend.onrender.com/api/users/signup",
+        "https://trakmama-backend.onrender.com/v1/api/users/signup",
         {
           // mode: "no-cors",
           method: "POST",
@@ -62,14 +64,15 @@ const AuthProvider = ({ children }) => {
       );
 
       if (!response.ok) {
-        throw new Error("Signup failed");
+        const errorData = await response.json();
+        throw new Error(errorData.message || "Signup failed");
       }
 
       const data = await response.json();
       setUser(data.user);
       localStorage.setItem("user", JSON.stringify(data.user));
       toast.success("Signup successful!");
-      navigate("/login");
+      setTimeout(() => navigate("/login"), 2000);
     } catch (error) {
       toast.error(error.message);
     }

@@ -15,6 +15,7 @@ import { Notification } from "./pages/FaBell";
 import { Website } from "./pages/CiGlobe";
 import { Blogs } from "./pages/BlogsPage";
 import LoginForm from "./pages/LoginForm";
+import Dashboard from "./pages/Dashboard";
 import AuthProvider from "./Context/Auth";
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<SignupForm />} />
           <Route path="/login" element={<LoginForm />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="*" element={<ErrorPage />} />
           <Route path="/about-us" element={<AboutUs title="About Us" />} />
           <Route
