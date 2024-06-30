@@ -7,6 +7,7 @@ import Review from "../components/Review";
 import Header from "../components/Header";
 import PricingSection from "../components/PricingSection";
 import "../styles/global.css";
+import WhyChooseUs from "../components/whychooseus";
 
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
     <div>
 
       <Herocarousel />
+      <WhyChooseUs />
       <Article />
       <Ourtools />
       {/* <h1 className="text-center">this is home page</h1> */}
