@@ -6,6 +6,7 @@ import Ourtools from "../components/ourtools";
 import Review from "../components/Review";
 import Header from "../components/Header";
 import PricingSection from "../components/PricingSection";
+import AboutTrakmama from "../components/AboutTrakmama"
 import "../styles/global.css";
 
 
@@ -36,6 +37,7 @@ const Home = () => {
         <br />
       </div>
       <PricingSection />
+      <AboutTrakmama/>
     </div>
   )
 
