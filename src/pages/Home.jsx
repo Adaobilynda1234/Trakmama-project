@@ -6,9 +6,12 @@ import Ourtools from "../components/ourtools";
 import Review from "../components/Review";
 import Header from "../components/Header";
 import PricingSection from "../components/PricingSection";
+
+
 import AboutTrakmama from "../components/AboutTrakmama"
 import "../styles/global.css";
 import WhyChooseUs from "../components/whychooseus";
+
 
 
 const Home = () => {
@@ -39,6 +42,7 @@ const Home = () => {
         <br />
       </div>
       <PricingSection />
+
       <AboutTrakmama/>
     </div>
   )
