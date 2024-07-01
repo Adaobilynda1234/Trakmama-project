@@ -1,5 +1,5 @@
 import React from "react";
-
+import Community from "../components/Community";
 import Herocarousel from "../components/Herocarousel";
 import Article from "../components/articles";
 import Ourtools from "../components/ourtools";
@@ -7,17 +7,13 @@ import Review from "../components/Review";
 import Header from "../components/Header";
 import PricingSection from "../components/PricingSection";
 
-
-import AboutTrakmama from "../components/AboutTrakmama"
+import AboutTrakmama from "../components/AboutTrakmama";
 import "../styles/global.css";
 import WhyChooseUs from "../components/whychooseus";
-
-
 
 const Home = () => {
   return (
     <div>
-
       <Herocarousel />
       <WhyChooseUs />
       <Article />
@@ -42,11 +38,10 @@ const Home = () => {
         <br />
       </div>
       <PricingSection />
-
-      <AboutTrakmama/>
+      <Community />
+      <AboutTrakmama />
     </div>
-  )
+  );
+};
 
-}
-
-export default Home
+export default Home;
