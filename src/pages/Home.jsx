@@ -6,7 +6,9 @@ import Ourtools from "../components/ourtools";
 import Review from "../components/Review";
 import Header from "../components/Header";
 import PricingSection from "../components/PricingSection";
+import Community from "../components/Community";
 import "../styles/global.css";
+ 
 
 
 const Home = () => {
@@ -36,6 +38,9 @@ const Home = () => {
         <br />
       </div>
       <PricingSection />
+      <br/>
+      <br/>
+      <Community />
     </div>
   )
 
