@@ -34,7 +34,7 @@ const CarouselComponent = () => {
 
   return (
     <div className="bg-[#F9D9F4]">
-      <div className="w-full max-w-3xl bg-[#F9D9F4] mx-auto mt-10">
+      <div className="w-full max-w-3xl bg-[#F9D9F4] mx-auto ">
         {/* flex container */}
         <Carousel showThumbs={false} showStatus={false} infiniteLoop autoPlay>
           {slides.map((slide) => (
