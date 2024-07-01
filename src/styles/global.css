@@ -14,3 +14,32 @@
     font-style: normal;
 }
 
+main {
+    padding: 40px;
+  }
+  
+  .about-us,
+  .our-mission {
+    display: flex;
+    margin-bottom: 40px;
+  }
+  
+  .about-us-image,
+  .mission-image {
+    width: 50%;
+    border-radius: 10px;
+  }
+  
+  .about-us-content,
+  .mission-content {
+    width: 50%;
+    padding: 20px;
+  }
+  
+  .h2 {
+    margin-bottom: 20px;
+  }
+  
+  .p {
+    line-height: 1.6;
+  }
