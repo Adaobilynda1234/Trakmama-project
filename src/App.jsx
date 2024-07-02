@@ -33,6 +33,7 @@ import Profile from "./components/Profile";
 function App() {
   return (
     <>
+
       <AuthProvider>
         {/* <Navbar /> */}
         {/* defining react-router path */}
@@ -73,6 +74,7 @@ function App() {
         </Routes>
         {/* <Footer/> */}
       </AuthProvider>
+       
     </>
   );
 }
