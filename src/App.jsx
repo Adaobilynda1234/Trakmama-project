@@ -19,7 +19,9 @@ import Dashboard from "./pages/Dashboard";
 import AuthProvider from "./Context/Auth";
 import PrivateRoute from "./components/PrivateRoute";
 import MainContent from "./components/MainContent";
-import chatAi from "./components/ChatAi";
+import MedicalInfo from "./components/MedicalInfo";
+import TodoList from "./components/TodoList";
+import Community from "./components/Community";
 import ChatAi from "./components/ChatAi";
 
 function App() {
@@ -43,6 +45,9 @@ function App() {
             <Route index element={<MainContent />} />
             {/* <Route path="profile" element={<Profile />} /> */}
             <Route path="chat" element={<ChatAi />} />
+            <Route path="medical" element={<MedicalInfo />} />
+            <Route path="todolist" element={<TodoList />} />
+            <Route path="community" element={<Community />} />
           </Route>
 
           <Route path="*" element={<ErrorPage />} />

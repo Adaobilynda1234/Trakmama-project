@@ -14,6 +14,16 @@ import {
   FaCogs,
 } from "react-icons/fa";
 import Dashboardlogo from "../assets/TRAK MAMA 4 (1).png";
+import Profileimg from "../assets/Vector (7).png";
+import Medicalinfoimg from "../assets/Vector (8).png";
+import Pregnancyimg from "../assets/Vector (9).png";
+import Healthtrackerimg from "../assets/Vector (10).png";
+import Community from "../assets/Vector (11).png";
+import Todolistimg from "../assets/Vector (12).png";
+import Paymentimg from "../assets/Vector (13).png";
+import Gamesimg from "../assets/Vector (14).png";
+import Notesimg from "../assets/Vector (15).png";
+import Settingimg from "../assets/Vector (16).png";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,34 +49,26 @@ const Sidebar = () => {
           <ul>
             <li className="my-2">
               <Link
-                to="/dashboard/profile"
+                to="/dashboard/medical"
                 className="flex items-center py-2 px-4 rounded hover:bg-pink-700"
               >
-                <FaUser className="mr-2" /> Profile
+                <img src={Medicalinfoimg} className="mr-2" /> Medical Info
               </Link>
             </li>
             <li className="my-2">
               <Link
-                to="/dashboard/chat"
+                to="/dashboard/todolist"
                 className="flex items-center py-2 px-4 rounded hover:bg-pink-700"
               >
-                <FaCalendarAlt className="mr-2" /> chat with a doctor
+                <img src={Todolistimg} className="mr-2" /> Todolist
               </Link>
             </li>
             <li className="my-2">
               <Link
-                to="/dashboard/baby-tracker"
+                to="/dashboard/payment"
                 className="flex items-center py-2 px-4 rounded hover:bg-pink-700"
               >
-                <FaBaby className="mr-2" /> Baby Tracker
-              </Link>
-            </li>
-            <li className="my-2">
-              <Link
-                to="/dashboard/progress"
-                className="flex items-center py-2 px-4 rounded hover:bg-pink-700"
-              >
-                <FaChartLine className="mr-2" /> Progress
+                <img src={Paymentimg} className="mr-2" /> Payment Plan
               </Link>
             </li>
             <li className="my-2">
@@ -74,31 +76,49 @@ const Sidebar = () => {
                 to="/dashboard/community"
                 className="flex items-center py-2 px-4 rounded hover:bg-pink-700"
               >
-                <FaUsers className="mr-2" /> Community
+                <img src={Community} className="mr-2" /> Community
               </Link>
             </li>
             <li className="my-2">
               <Link
-                to="/dashboard/expert-advice"
+                to="/dashboard/profile"
                 className="flex items-center py-2 px-4 rounded hover:bg-pink-700"
               >
-                <FaQuestionCircle className="mr-2" /> Expert Advice
+                <img src={Profileimg} className="mr-2" />
+                Profile
               </Link>
             </li>
             <li className="my-2">
               <Link
-                to="/dashboard/pregnancy-plan"
+                to="/dashboard/pregnancy"
                 className="flex items-center py-2 px-4 rounded hover:bg-pink-700"
               >
-                <FaClipboardList className="mr-2" /> Pregnancy Plan
+                <img src={Pregnancyimg} className="mr-2" /> Pregnancy
               </Link>
             </li>
             <li className="my-2">
               <Link
-                to="/dashboard/names"
+                to="/dashboard/healthtracker"
                 className="flex items-center py-2 px-4 rounded hover:bg-pink-700"
               >
-                <FaBookmark className="mr-2" /> Names
+                <img src={Healthtrackerimg} className="mr-2" />
+                Health Tracker
+              </Link>
+            </li>
+            <li className="my-2">
+              <Link
+                to="/dashboard/games"
+                className="flex items-center py-2 px-4 rounded hover:bg-pink-700"
+              >
+                <img src={Gamesimg} className="mr-2" /> Games
+              </Link>
+            </li>
+            <li className="my-2">
+              <Link
+                to="/dashboard/notes"
+                className="flex items-center py-2 px-4 rounded hover:bg-pink-700"
+              >
+                <img src={Notesimg} className="mr-2" /> Notes
               </Link>
             </li>
             <li className="my-2">
@@ -106,7 +126,7 @@ const Sidebar = () => {
                 to="/dashboard/settings"
                 className="flex items-center py-2 px-4 rounded hover:bg-pink-700"
               >
-                <FaCogs className="mr-2" /> Settings
+                <img src={Settingimg} className="mr-2" /> Settings
               </Link>
             </li>
           </ul>
