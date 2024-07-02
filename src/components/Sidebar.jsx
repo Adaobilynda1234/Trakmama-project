@@ -73,6 +73,15 @@ const Sidebar = () => {
             </li>
             <li className="my-2">
               <Link
+                to="/dashboard/pregnancytracker"
+                className="flex items-center py-2 px-4 rounded hover:bg-pink-700"
+              >
+                <img src={Healthtrackerimg} className="mr-2" />
+                Pregnancy Tracker
+              </Link>
+            </li>
+            <li className="my-2">
+              <Link
                 to="/dashboard/community"
                 className="flex items-center py-2 px-4 rounded hover:bg-pink-700"
               >
@@ -96,15 +105,7 @@ const Sidebar = () => {
                 <img src={Pregnancyimg} className="mr-2" /> Pregnancy
               </Link>
             </li>
-            <li className="my-2">
-              <Link
-                to="/dashboard/healthtracker"
-                className="flex items-center py-2 px-4 rounded hover:bg-pink-700"
-              >
-                <img src={Healthtrackerimg} className="mr-2" />
-                Health Tracker
-              </Link>
-            </li>
+
             <li className="my-2">
               <Link
                 to="/dashboard/games"

@@ -23,6 +23,12 @@ import MedicalInfo from "./components/MedicalInfo";
 import TodoList from "./components/TodoList";
 import Community from "./components/Community";
 import ChatAi from "./components/ChatAi";
+import Pregnancytracker from "./components/Pregnancytracker";
+import Pregnancy from "./components/Pregnancy";
+import Notes from "./components/Notes";
+import Games from "./components/Games";
+import Settings from "./components/Settings";
+import Profile from "./components/Profile";
 
 function App() {
   return (
@@ -43,11 +49,16 @@ function App() {
             }
           >
             <Route index element={<MainContent />} />
-            {/* <Route path="profile" element={<Profile />} /> */}
             <Route path="chat" element={<ChatAi />} />
             <Route path="medical" element={<MedicalInfo />} />
             <Route path="todolist" element={<TodoList />} />
             <Route path="community" element={<Community />} />
+            <Route path="pregnancytracker" element={<Pregnancytracker />} />
+            <Route path="pregnancy" element={<Pregnancy />} />
+            <Route path="notes" element={<Notes />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="settings" element={<Settings />} />
+            <Route path="games" element={<Games />} />
           </Route>
 
           <Route path="*" element={<ErrorPage />} />
