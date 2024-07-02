@@ -1,3 +1,4 @@
+
 import React from "react"
 import comunity1 from '../assets/comunity1.png'
 import community2 from '../assets/comunity2.png'
@@ -41,3 +42,4 @@ const Community = ()=> {
 }
 
 export default Community;
+
