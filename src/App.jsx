@@ -17,6 +17,10 @@ import { Blogs } from "./pages/BlogsPage";
 import LoginForm from "./pages/LoginForm";
 import Dashboard from "./pages/Dashboard";
 import AuthProvider from "./Context/Auth";
+import PrivateRoute from "./components/PrivateRoute";
+import MainContent from "./components/MainContent";
+import chatAi from "./components/ChatAi";
+import ChatAi from "./components/ChatAi";
 
 function App() {
   return (
@@ -28,7 +32,19 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<SignupForm />} />
           <Route path="/login" element={<LoginForm />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route
+            path="/dashboard"
+            element={
+              <PrivateRoute>
+                <Dashboard />
+              </PrivateRoute>
+            }
+          >
+            <Route index element={<MainContent />} />
+            {/* <Route path="profile" element={<Profile />} /> */}
+            <Route path="chat" element={<ChatAi />} />
+          </Route>
+
           <Route path="*" element={<ErrorPage />} />
           <Route path="/about-us" element={<AboutUs title="About Us" />} />
           <Route

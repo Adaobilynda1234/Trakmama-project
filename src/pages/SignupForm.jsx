@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import pregnancyimg from "../assets/Pregnancy test-rafiki 1.png";
 import Signuplogo from "../assets/Traklogo.png";
 import { FaGoogle, FaEye, FaEyeSlash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Signup = () => {
   const { signup } = useContext(AuthContext);
@@ -162,9 +163,9 @@ const Signup = () => {
           </form>
           <p className="text-sm text-center mt-4">
             Already have an account?{" "}
-            <a href="/login" className="text-[#B252AA]">
+            <Link to="/login" className="text-[#B252AA]">
               Log in
-            </a>
+            </Link>
           </p>
         </div>
       </div>

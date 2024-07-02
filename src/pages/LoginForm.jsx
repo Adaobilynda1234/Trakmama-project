@@ -3,7 +3,7 @@ import { AuthContext } from "../Context/Auth";
 import { FaGoogle, FaEye, FaEyeSlash } from "react-icons/fa";
 import LoginImg from "../assets/cuate.png";
 import Loginlogo from "../assets/Traklogo.png";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -102,7 +102,7 @@ const Login = () => {
             </div>
             <button
               type="submit"
-              className="w-full py-2 bg-[#7EB97D] text-white rounded"
+              className="w-full py-2 bg-[#7EB97D] text-white rounded hover:bg-gray"
             >
               Log in
             </button>
@@ -117,9 +117,9 @@ const Login = () => {
           </button>
           <p className="text-center mt-4">
             Don't have an account?{" "}
-            <a href="/signup" className="text-[#B252AA]">
+            <Link to="/signup" className="text-[#B252AA]">
               Sign up
-            </a>
+            </Link>
           </p>
         </div>
       </div>
