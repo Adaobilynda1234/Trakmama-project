@@ -36,8 +36,7 @@ function App() {
     <>
 
       <AuthProvider>
-        {/* <Navbar /> */}
-        {/* defining react-router path */}
+        <Navbar />         {/* defining react-router path */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<SignupForm />} />
@@ -73,7 +72,7 @@ function App() {
           <Route path="website" element={<Website title CiGlobe />} />
           <Route path="blogs" element={<Blogs title Blogs />} />
         </Routes>
-        {/* <Footer/> */}
+         <Footer/> 
       </AuthProvider>
        
     </>
