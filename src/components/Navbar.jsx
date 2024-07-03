@@ -8,7 +8,7 @@ import logo from '../assets/logo.png';
 
 
 const Navbar = () => {
-    // State to handle the navbar's open/close status
+    // State to handle the navbar's open/close 
     const [openNav, setOpenNav] = useState(true);
 
     // Function to toggle the navbar's visibility
