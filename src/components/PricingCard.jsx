@@ -1,6 +1,5 @@
 import React from 'react';
 // import './styles/global.css'; // Import your global CSS file
-import { Link } from 'react-router-dom';
 
 const PricingCard = ({ plan, features, price, imageSrc }) => {
     return (
@@ -19,20 +18,18 @@ const PricingCard = ({ plan, features, price, imageSrc }) => {
                     <li key={index}>{feature}</li>
                 ))}
             </ul>
-            <Link to="/signup">
-                <button 
-                    className="bg-pink-500 hover:bg-pink-400 text-white font-bold py-2 px-4 rounded example-text"
-                    style={{
-                        color: '#B252AA',
-                        textShadow: '#F9D9F4',
-                        borderColor: '#389346',
-                        border: '2px solid #7EB97D',
-                        backgroundColor: '#D8EAD8'
-                    }}
-                >
-                    {price === 'FREE' ? price : `₦ ${price}`}
-                </button>
-            </Link>
+            <button 
+                className="bg-pink-500 hover:bg-pink-400 text-white font-bold py-2 px-4 rounded example-text"
+                style={{
+                    color: '#B252AA',
+                    textShadow:'#F9D9F4',
+                    borderColor: '#389346',
+                    border: '2px solid #7EB97D',
+                    backgroundColor: '#D8EAD8'
+                }}
+            >
+                {price === 'FREE' ? price : `₦ ${price}`}
+            </button>
         </div>
     );
 };
