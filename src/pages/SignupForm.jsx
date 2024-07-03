@@ -1,17 +1,16 @@
-// src/components/Signup.jsx
 import React, { useContext, useState } from "react";
-// import { AuthContext } from "../context/AuthContext";
-// import { ToastContainer, toast } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
+import { AuthContext } from "../Context/Auth";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import pregnancyimg from "../assets/Pregnancy test-rafiki 1.png";
 import Signuplogo from "../assets/Traklogo.png";
-// src/components/Signup.jsx
 import { FaGoogle, FaEye, FaEyeSlash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Signup = () => {
-  //   const { signup } = useContext(AuthContext);
+  const { signup } = useContext(AuthContext);
   const [formData, setFormData] = useState({
-    name: "",
+    username: "",
     email: "",
     password: "",
     dueDate: "",
@@ -28,7 +27,7 @@ const Signup = () => {
 
   const validateForm = () => {
     const newErrors = {};
-    if (!formData.name) newErrors.name = "Name is required";
+    if (!formData.username) newErrors.username = "Name is required";
     if (!formData.email) newErrors.email = "Email is required";
     if (!formData.password) newErrors.password = "Password is required";
     if (formData.password.length < 8)
@@ -43,7 +42,7 @@ const Signup = () => {
     if (Object.keys(formErrors).length > 0) {
       setErrors(formErrors);
     } else {
-      //   signup(formData);
+      signup(formData);
     }
   };
 
@@ -80,14 +79,14 @@ const Signup = () => {
             <div>
               <input
                 type="text"
-                name="name"
+                name="username"
                 placeholder="Enter your name"
-                value={formData.name}
+                value={formData.username}
                 onChange={handleChange}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg"
               />
-              {errors.name && (
-                <p className="text-sm text-red-500">{errors.name}</p>
+              {errors.username && (
+                <p className="text-sm text-red-500">{errors.username}</p>
               )}
             </div>
             <div>
@@ -157,20 +156,20 @@ const Signup = () => {
             </p>
             <button
               type="submit"
-              className="w-full py-2 px-4 bg-[#7EB97D] text-white rounded-lg"
+              className="w-full py-2 px-4 bg-[#7EB97D] hover:bg-[gray] text-white rounded-lg"
             >
               Create Your Account
             </button>
           </form>
           <p className="text-sm text-center mt-4">
             Already have an account?{" "}
-            <a href="/login" className="text-[#B252AA]">
+            <Link to="/login" className="text-[#B252AA]">
               Log in
-            </a>
+            </Link>
           </p>
         </div>
       </div>
-      {/* <ToastContainer /> */}
+      <ToastContainer />
     </div>
   );
 };
