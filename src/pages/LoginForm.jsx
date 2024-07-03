@@ -6,6 +6,7 @@ import Loginlogo from "../assets/Traklogo.png";
 import { useNavigate, Link } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Spinner from "../components/Spinner";
 
 const Login = () => {
   const { login } = useContext(AuthContext);
@@ -13,6 +14,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
   const validateForm = () => {
@@ -33,12 +35,14 @@ const Login = () => {
       setErrors(formErrors);
       return;
     }
-
+    setIsLoading(true);
     await login(email, password, () => navigate("/dashboard"));
+    setIsLoading(false);
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center">
+      {isLoading && <Spinner />}
       <div className="w-full max-w-2xl p-6 flex flex-col lg:flex-row bg-[#EDF8EC] rounded-lg shadow-md">
         <div className="hidden lg:block w-1/2 p-6">
           <div className="flex flex-start  items-center mb-8">
@@ -102,7 +106,7 @@ const Login = () => {
             </div>
             <button
               type="submit"
-              className="w-full py-2 bg-[#7EB97D] text-white rounded hover:bg-gray"
+              className="w-full py-2 bg-[#7EB97D] text-white rounded hover:bg-[gray]"
             >
               Log in
             </button>

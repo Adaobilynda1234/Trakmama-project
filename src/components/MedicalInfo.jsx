@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 
 const MedicalInfoForm = () => {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     lastMenstrualPeriod: "",
     dueDate: "",
     pregnantBefore: "",
     timesPregnant: "",
     complications: "",
-  });
+  };
+  const [formData, setFormData] = useState(initialFormData);
 
   const [errors, setErrors] = useState({});
 
@@ -43,6 +44,8 @@ const MedicalInfoForm = () => {
     const newErrors = validate();
     if (Object.keys(newErrors).length === 0) {
       alert("Medical info saved successfully");
+      setFormData(initialFormData); // Reset form
+      setErrors({}); // Reset errors
     } else {
       setErrors(newErrors);
     }

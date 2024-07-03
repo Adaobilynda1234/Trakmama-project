@@ -2,13 +2,15 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Groupimage from "../assets/Group 79.png";
+import Babyimage from "../assets/Baby birth-cuate 1.png";
 import PregnancyImage from "../assets/Pregnancy stages-pana 1.png";
+import { Link } from "react-router-dom";
 
 const CarouselComponent = () => {
   const slides = [
     {
       id: 1,
-      image: Groupimage,
+      image: Babyimage,
       text: "Track Your Pregnancy And Your Baby's Development Week By Week",
       subtext:
         "Discover tons of carefully selected tools curated with your pregnancy in mind",
@@ -24,7 +26,7 @@ const CarouselComponent = () => {
     },
     {
       id: 3,
-      image: PregnancyImage,
+      image: Groupimage,
       text: "Track Your Pregnancy And Your Baby's Development Week By Week",
       subtext:
         "Discover tons of carefully selected tools curated with your pregnancy in mind",
@@ -46,9 +48,12 @@ const CarouselComponent = () => {
                 <h2 className="text-2xl font-bold mb-2 ">{slide.text}</h2>
                 <p className="mb-8 mt-4 ">{slide.subtext}</p>
 
-                <button className="bg-[#7EB97D] flex justify-center mt-4 md:mt-8 mb-8 md:mb-2 text-white py-2 px-4 ml-8 rounded">
-                  Learn More
-                </button>
+                <Link to="/about-us">
+                  {" "}
+                  <button className="bg-[#7EB97D] flex justify-center mt-4 md:mt-8 mb-8 md:mb-2 text-white py-2 px-4 hover:bg-gray hover:bg-[gray]  rounded">
+                    Learn More
+                  </button>
+                </Link>
               </div>
               {/* second flex */}
               <div className="md:w-1/2 w-full">
