@@ -1,19 +1,12 @@
 import React from "react";
-import Whatwevalue from "../components/Whatwevalue";
-import Disclaimer from "../components/Disclaimer";
+import Mission from "../components/Mission";
 
 export const AboutUs = () => {
   return (
-    <div>  
-      <Whatwevalue/>
-      <br/>
-      <Disclaimer/>
-
-      
-     
-      
-      
-      </div>
+    <div>
+      <h1 className="text-center">this is About us page</h1>
+      <Mission/>
+    </div>
   );
 };
 
