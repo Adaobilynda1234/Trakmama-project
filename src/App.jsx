@@ -34,6 +34,7 @@ import Communityfeature from "./components/CommunityFeature";
 function App() {
   return (
     <>
+
       <AuthProvider>
         {/* <Navbar /> */}
         {/* defining react-router path */}
@@ -74,6 +75,7 @@ function App() {
         </Routes>
         {/* <Footer/> */}
       </AuthProvider>
+       
     </>
   );
 }
