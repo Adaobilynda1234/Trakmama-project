@@ -6,6 +6,7 @@ import pregnancyimg from "../assets/Pregnancy test-rafiki 1.png";
 import Signuplogo from "../assets/Traklogo.png";
 import { FaGoogle, FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Spinner from "../components/Spinner";
 
 const Signup = () => {
   const { signup } = useContext(AuthContext);
@@ -17,6 +18,7 @@ const Signup = () => {
   });
   const [errors, setErrors] = useState({});
   const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -42,7 +44,9 @@ const Signup = () => {
     if (Object.keys(formErrors).length > 0) {
       setErrors(formErrors);
     } else {
+      setIsLoading(true);
       signup(formData);
+      setIsLoading(false);
     }
   };
 
@@ -52,6 +56,7 @@ const Signup = () => {
 
   return (
     <div className="flex flex-col items-center min-h-screen bg-white py-4">
+      {isLoading && <Spinner />}
       <div className="flex justify-center align-center md:flex-row bg-[#EDF8EC] p-6 rounded-lg shadow-lg w-full max-w-5xl">
         <div className="hidden md:flex flex-col items-center mb-6 p-4 md:mb-0 md:mr-6 md:w-1/2">
           <div className="flex flex-start  items-center mb-8">
