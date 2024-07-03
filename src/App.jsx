@@ -29,6 +29,8 @@ import Notes from "./components/Notes";
 import Games from "./components/Games";
 import Settings from "./components/Settings";
 import Profile from "./components/Profile";
+import SubSection from "./components/Subscription";
+import PaymentForm from "./pages/Paymentform";
 
 function App() {
   return (
@@ -41,6 +43,14 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<SignupForm />} />
           <Route path="/login" element={<LoginForm />} />
+          <Route path="*" element={<ErrorPage />} />
+          <Route path="/about-us" element={<AboutUs title="About Us" />} />
+          <Route path="/contact-us" element={<ContactUs title="Contact Us" />} />
+          <Route path="notification" element={<Notification title="FaBell" />} />
+          <Route path="website" element={<Website title="CiGlobe" />} />
+          <Route path="blogs" element={<Blogs title="Blogs" />} />
+          <Route path="/subscribe" element={<SubSection />} />
+          <Route path="/checkout" element={<PaymentForm title="Check Out" />} />
           <Route
             path="/dashboard"
             element={
@@ -68,13 +78,18 @@ function App() {
             path="/contact-us"
             element={<ContactUs title="Contact Us" />}
           />
-          <Route path="notification" element={<Notification title FaBell />} />
-          <Route path="website" element={<Website title CiGlobe />} />
-          <Route path="blogs" element={<Blogs title Blogs />} />
+          <Route path="notification" element={<Notification title="FaBell" />} />
+          <Route path="website" element={<Website title="CiGlobe" />} />
+          <Route path="blogs" element={<Blogs title="Blogs" />} />
         </Routes>
         {/* <Footer/> */}
       </AuthProvider>
-       
+
+      {/*<Navbar /> */}
+
+
+      {/* defining react-router path */}
+
     </>
   );
 }
