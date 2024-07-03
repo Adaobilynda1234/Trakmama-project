@@ -1,5 +1,5 @@
 import React from "react";
-// import Community from "../components/Community";
+ import Community from "../components/Community";
 import Herocarousel from "../components/Herocarousel";
 import Article from "../components/articles";
 import Ourtools from "../components/ourtools";
@@ -38,8 +38,8 @@ const Home = () => {
         <br />
       </div>
       <PricingSection />
-      {/* <Community /> */}
-      <AboutTrakmama />
+       <Community /> 
+       <AboutTrakmama />
     </div>
   );
 };
