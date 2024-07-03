@@ -2,7 +2,7 @@
 import "./index.css";
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
@@ -21,7 +21,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import MainContent from "./components/MainContent";
 import MedicalInfo from "./components/MedicalInfo";
 import TodoList from "./components/TodoList";
-import CommunityFeature from "./components/CommunityFeature";
+// import Hidenavbar from "./components/Hidenavbar";
 import ChatAi from "./components/ChatAi";
 import Pregnancytracker from "./components/Pregnancytracker";
 import Pregnancy from "./components/Pregnancy";
@@ -29,14 +29,13 @@ import Notes from "./components/Notes";
 import Games from "./components/Games";
 import Settings from "./components/Settings";
 import Profile from "./components/Profile";
-import Communityfeature from "./components/CommunityFeature";
+import CommunityFeature from "./components/CommunityFeature";
 
 function App() {
   return (
     <>
-
       <AuthProvider>
-        <Navbar />         {/* defining react-router path */}
+        {/* defining react-router path */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<SignupForm />} />
@@ -72,9 +71,7 @@ function App() {
           <Route path="website" element={<Website title CiGlobe />} />
           <Route path="blogs" element={<Blogs title Blogs />} />
         </Routes>
-         <Footer/> 
       </AuthProvider>
-       
     </>
   );
 }

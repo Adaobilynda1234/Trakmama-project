@@ -2,23 +2,19 @@ import React from "react";
 import Whatwevalue from "../components/Whatwevalue";
 import Disclaimer from "../components/Disclaimer";
 import MissionOfficial from "../components/MissionOfficial";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export const AboutUs = () => {
   return (
-    <div>  
-      <br/>
-       <MissionOfficial/>
-      <Whatwevalue/>
-      <br/>
-      <Disclaimer/>
-
-      
-     
-      
-      
-      </div>
+    <div>
+      <Navbar />
+      <br />
+      <MissionOfficial />
+      <Whatwevalue />
+      <br />
+      <Disclaimer />
+      <Footer />
+    </div>
   );
 };
-
-
- 
