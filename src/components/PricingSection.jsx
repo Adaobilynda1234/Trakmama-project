@@ -16,13 +16,13 @@ const PricingSection = () => {
         {
             plan: 'STANDARD',
             features: ['Access to AI Telemedicine', 'Access to Community', 'Personalized Tracker', 'Free resources'],
-            price: '900',
+            price: '1',
             imageSrc: shopImage,
         },
         {
             plan: 'PREMIUM',
             features: ['Access to AI Telemedicine', 'Access to Community', 'Access to create community', 'Personalized tracker', 'Free resources'],
-            price: '1200',
+            price: '2',
             imageSrc: phoneImage,
         }
     ];
