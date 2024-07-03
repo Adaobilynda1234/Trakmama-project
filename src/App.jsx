@@ -34,6 +34,7 @@ function App() {
   return (
     <>
 
+
       <AuthProvider>
         <Navbar />         {/* defining react-router path */}
         <Routes>
@@ -74,6 +75,7 @@ function App() {
          <Footer/> 
       </AuthProvider>
        
+
     </>
   );
 }
