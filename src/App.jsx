@@ -21,7 +21,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import MainContent from "./components/MainContent";
 import MedicalInfo from "./components/MedicalInfo";
 import TodoList from "./components/TodoList";
-import Community from "./components/Community";
+import CommunityFeature from "./components/CommunityFeature";
 import ChatAi from "./components/ChatAi";
 import Pregnancytracker from "./components/Pregnancytracker";
 import Pregnancy from "./components/Pregnancy";
@@ -29,6 +29,7 @@ import Notes from "./components/Notes";
 import Games from "./components/Games";
 import Settings from "./components/Settings";
 import Profile from "./components/Profile";
+import Communityfeature from "./components/CommunityFeature";
 
 function App() {
   return (
@@ -52,7 +53,7 @@ function App() {
             <Route path="chat" element={<ChatAi />} />
             <Route path="medical" element={<MedicalInfo />} />
             <Route path="todolist" element={<TodoList />} />
-            <Route path="community" element={<Community />} />
+            <Route path="community" element={<CommunityFeature />} />
             <Route path="pregnancytracker" element={<Pregnancytracker />} />
             <Route path="pregnancy" element={<Pregnancy />} />
             <Route path="notes" element={<Notes />} />

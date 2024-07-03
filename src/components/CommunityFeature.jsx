@@ -1,6 +1,6 @@
 import React from "react";
 
-const Community = () => {
+const Communityfeature = () => {
   return (
     <div>
       <h1 className="text-center font-bold text-lg">
@@ -10,4 +10,4 @@ const Community = () => {
   );
 };
 
-export default Community;
+export default Communityfeature;
