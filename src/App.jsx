@@ -29,7 +29,7 @@ import Notes from "./components/Notes";
 import Games from "./components/Games";
 import Settings from "./components/Settings";
 import Profile from "./components/Profile";
-import CommunityFeature from "./components/CommunityFeature";
+import Communityfeature from "./components/CommunityFeature";
 import SubSection from "./components/Subscription";
 import Paymentform from "./pages/Paymentform";
 import Healthtracker from "./components/Healthtracker";
@@ -56,7 +56,7 @@ function App() {
             <Route path="chat" element={<ChatAi />} />
             <Route path="medical" element={<MedicalInfo />} />
             <Route path="todolist" element={<TodoList />} />
-            <Route path="community" element={<CommunityFeature />} />
+            <Route path="community" element={<Communityfeature />} />
             <Route path="pregnancytracker" element={<Pregnancytracker />} />
             <Route path="healthtracker" element={<Healthtracker />} />
             <Route path="pregnancy" element={<Pregnancy />} />
