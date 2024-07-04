@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const WhyChooseUs = () => {
     return (
@@ -31,9 +32,11 @@ const WhyChooseUs = () => {
                             </div>
                         </div>
                         <div className="mt-8">
-                            <button className="bg-[#7EB97D] text-button-pink font-light text-sm py-2 px-4 rounded-[5px] hover:bg-opacity-80">
-                                See Features
-                            </button>
+                            <Link to="/login">
+                                <button className="bg-[#7EB97D] text-button-pink font-light text-sm py-2 px-4 rounded-[5px] hover:bg-opacity-80">
+                                    See Features
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

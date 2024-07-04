@@ -49,8 +49,9 @@ function App() {
           <Route path="notification" element={<Notification title="FaBell" />} />
           <Route path="website" element={<Website title="CiGlobe" />} />
           <Route path="blogs" element={<Blogs title="Blogs" />} />
-          <Route path="/subscribe" element={<SubSection />} />
+          <Route path="/dashboard/payment" element={<SubSection />} />
           <Route path="/checkout" element={<PaymentForm title="Check Out" />} />
+
           <Route
             path="/dashboard"
             element={
@@ -70,6 +71,8 @@ function App() {
             <Route path="profile" element={<Profile />} />
             <Route path="settings" element={<Settings />} />
             <Route path="games" element={<Games />} />
+            {/* <Route path="payment" element={<SubSection />} /> */}
+            {/* <Route path="/checkout" element={<PaymentForm title="Check Out" />} /> */}
           </Route>
 
           <Route path="*" element={<ErrorPage />} />

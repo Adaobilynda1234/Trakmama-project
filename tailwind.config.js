@@ -8,6 +8,7 @@ export default {
         'button-green-dark': '#131E12',
         'button-green-light':'#7EB97D',
         'tools-bg': '#F0FBEC',
+        'deep-pink': '#B252AA',
       },
     },
   },
