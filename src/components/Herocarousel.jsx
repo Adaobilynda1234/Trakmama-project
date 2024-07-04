@@ -35,27 +35,23 @@ const CarouselComponent = () => {
   ];
 
   return (
-    <div className="bg-[#F9D9F4]">
-      <div className="w-full max-w-3xl bg-[#F9D9F4] mx-auto ">
-        {/* flex container */}
+    <div className="bg-[#F9D9F4] overflow-y-auto">
+      <div className="w-full max-w-3xl bg-[#F9D9F4] mx-auto">
         <Carousel showThumbs={false} showStatus={false} infiniteLoop autoPlay>
           {slides.map((slide) => (
             <div
               key={slide.id}
-              className=" p-8 rounded-lg  md:flex justify-between md:align-center text-left"
+              className="p-8 rounded-lg md:flex justify-between md:align-center text-left"
             >
               <div className="md:w-1/2 w-full">
-                <h2 className="text-2xl font-bold mb-2 ">{slide.text}</h2>
-                <p className="mb-8 mt-4 ">{slide.subtext}</p>
-
+                <h2 className="text-2xl font-bold mb-2">{slide.text}</h2>
+                <p className="mb-8 mt-4">{slide.subtext}</p>
                 <Link to="/about-us">
-                  {" "}
-                  <button className="bg-[#7EB97D] flex justify-center mt-4 md:mt-8 mb-8 md:mb-2 text-white py-2 px-4 hover:bg-gray hover:bg-[gray]  rounded">
+                  <button className="bg-[#7EB97D] flex justify-center mt-4 md:mt-8 mb-8 md:mb-2 text-white py-2 px-4 hover:bg-gray hover:bg-[gray] rounded">
                     Learn More
                   </button>
                 </Link>
               </div>
-              {/* second flex */}
               <div className="md:w-1/2 w-full">
                 <img src={slide.image} alt="Baby" className="h-auto w-auto" />
                 <span className="ml-4 text-2xl text-[#F9D9F4]">
