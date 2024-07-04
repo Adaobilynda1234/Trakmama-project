@@ -13,7 +13,7 @@ import {
   FaBookmark,
   FaCogs,
 } from "react-icons/fa";
-import Dashboardlogo from "../assets/TRAK MAMA 4 (1).png";
+import Dashboardlogo from "../assets/trakmama.png";
 import Profileimg from "../assets/Vector (7).png";
 import Medicalinfoimg from "../assets/Vector (8).png";
 import Pregnancyimg from "../assets/Vector (9).png";
