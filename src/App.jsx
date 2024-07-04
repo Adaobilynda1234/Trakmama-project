@@ -30,6 +30,8 @@ import Games from "./components/Games";
 import Settings from "./components/Settings";
 import Profile from "./components/Profile";
 import CommunityFeature from "./components/CommunityFeature";
+import SubSection from "./components/Subscription";
+import Paymentform from "./pages/Paymentform";
 
 function App() {
   return (
@@ -40,6 +42,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<SignupForm />} />
           <Route path="/login" element={<LoginForm />} />
+          <Route path="/checkout" element={<Paymentform />} />
           <Route
             path="/dashboard"
             element={
@@ -58,6 +61,7 @@ function App() {
             <Route path="notes" element={<Notes />} />
             <Route path="profile" element={<Profile />} />
             <Route path="settings" element={<Settings />} />
+            <Route path="payment" element={<SubSection />} />
             <Route path="games" element={<Games />} />
           </Route>
 

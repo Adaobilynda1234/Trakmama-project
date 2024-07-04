@@ -2,17 +2,7 @@
 // src/components/Sidebar.jsx
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  FaUser,
-  FaCalendarAlt,
-  FaBaby,
-  FaChartLine,
-  FaUsers,
-  FaQuestionCircle,
-  FaClipboardList,
-  FaBookmark,
-  FaCogs,
-} from "react-icons/fa";
+
 import Dashboardlogo from "../assets/TRAK MAMA 4 (1).png";
 import Profileimg from "../assets/Vector (7).png";
 import Medicalinfoimg from "../assets/Vector (8).png";
@@ -39,7 +29,7 @@ const Sidebar = () => {
       <div
         className={`${
           isOpen ? "block" : "hidden"
-        } md:block bg-[#dd7dd5] rounded-tr-[20px] rounded-br-[20px] text-white w-64 min-h-screen p-4`}
+        } md:block bg-[#dd7dd5] rounded-tr-[20px] rounded-br-[20px] text-white w-64 min-h-auto p-4`}
       >
         <div className=" flex text-center mb-4">
           <img src={Dashboardlogo} className="w-12 h-12" />
@@ -71,7 +61,7 @@ const Sidebar = () => {
                 <img src={Paymentimg} className="mr-2" /> Payment Plan
               </Link>
             </li>
-            <li className="my-2">
+            <li className="my-3">
               <Link
                 to="/dashboard/pregnancytracker"
                 className="flex items-center py-2 px-4 rounded hover:bg-pink-700"
