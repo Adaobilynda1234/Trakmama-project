@@ -32,6 +32,7 @@ import Profile from "./components/Profile";
 import CommunityFeature from "./components/CommunityFeature";
 import SubSection from "./components/Subscription";
 import Paymentform from "./pages/Paymentform";
+import Healthtracker from "./components/Healthtracker";
 
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
             <Route path="todolist" element={<TodoList />} />
             <Route path="community" element={<CommunityFeature />} />
             <Route path="pregnancytracker" element={<Pregnancytracker />} />
+            <Route path="healthtracker" element={<Healthtracker />} />
             <Route path="pregnancy" element={<Pregnancy />} />
             <Route path="notes" element={<Notes />} />
             <Route path="profile" element={<Profile />} />
