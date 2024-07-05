@@ -101,7 +101,7 @@ function BlogSamples() {
             </h2>
           </div>
         </div>
-        <div className="relative h-1/2">
+        <div className="relative h-fit">
           <img src={nutrition} alt="" />
           <button className="absolute right-12 top-3">
             <img src={readbutton} alt="" />
