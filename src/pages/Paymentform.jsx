@@ -24,11 +24,7 @@ const PaymentForm = () => {
 
   const { plan } = state;
   const amount =
-    plan === "Premium Plan"
-      ? 1200 * 100
-      : plan === "Standard Plan"
-      ? 900 * 100
-      : 0;
+    plan === "Premium Plan" ? 2 * 100 : plan === "Standard Plan" ? 1 * 100 : 0;
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");

@@ -20,7 +20,7 @@ const SubSection = () => {
           Choose The Perfect Plan For Your Pregnancy Journey
         </h2>
         <p className="mb-12 text-[#131E12]">
-          Experience all the benefits from our features starting at just ₦900
+          Experience all the benefits from our features starting at just $1
           naira. From your three months trial plan, upgrade to the plan that
           suits your needs and make your pregnancy journey seamless.
         </p>
