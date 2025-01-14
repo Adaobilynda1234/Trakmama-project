@@ -5,7 +5,7 @@ import MissionOfficial from "../components/MissionOfficial";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-export const AboutUs = () => {
+const AboutUs = () => {
   return (
     <div>
       <Navbar />
@@ -18,3 +18,4 @@ export const AboutUs = () => {
     </div>
   );
 };
+export default AboutUs;

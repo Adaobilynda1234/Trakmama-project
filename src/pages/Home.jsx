@@ -9,7 +9,6 @@ import PricingSection from "../components/PricingSection";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import AboutTrakmama from "../components/AboutTrakmama";
-import "../styles/global.css";
 import WhyChooseUs from "../components/whychooseus";
 
 const Home = () => {

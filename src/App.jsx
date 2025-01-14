@@ -1,19 +1,11 @@
-//import './App.css';
+import React, { useEffect } from "react";
 import "./index.css";
-import React from "react";
 import { Routes, Route } from "react-router-dom";
-// import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import SignUp from "./pages/SignUp";
-import Login from "./pages/Login";
 import SignupForm from "./pages/SignupForm";
 import ErrorPage from "./pages/ErrorPage";
-import { AboutUs } from "./pages/AboutUs";
-import { ContactUs } from "./pages/Contact-us";
-import { Notification } from "./pages/FaBell";
-import { Website } from "./pages/CiGlobe";
-import { Blogs } from "./pages/BlogsPage";
+import AboutUs from "./pages/AboutUs";
+import ContactUs from "./pages/Contact-us";
 import LoginForm from "./pages/LoginForm";
 import Dashboard from "./pages/Dashboard";
 import AuthProvider from "./Context/Auth";
@@ -21,7 +13,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import MainContent from "./components/MainContent";
 import MedicalInfo from "./components/MedicalInfo";
 import TodoList from "./components/TodoList";
-// import Hidenavbar from "./components/Hidenavbar";
+
 import ChatAi from "./components/ChatAi";
 import Pregnancytracker from "./components/Pregnancytracker";
 import Pregnancy from "./components/Pregnancy";
@@ -35,6 +27,28 @@ import Paymentform from "./pages/Paymentform";
 import Healthtracker from "./components/Healthtracker";
 
 function App() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.onload = function () {
+      window.voiceflow.chat.load({
+        verify: { projectID: "666d699b63e4e9ccf97588d5" },
+        url: "https://general-runtime.voiceflow.com",
+        versionID: "production",
+      });
+    };
+    script.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
+    const s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(script, s);
+
+    // Cleanup on unmount
+    return () => {
+      if (script.parentNode) {
+        script.parentNode.removeChild(script);
+      }
+    };
+  }, []);
+
   return (
     <>
       <AuthProvider>
@@ -73,9 +87,6 @@ function App() {
             path="/contact-us"
             element={<ContactUs title="Contact Us" />}
           />
-          <Route path="notification" element={<Notification title FaBell />} />
-          <Route path="website" element={<Website title CiGlobe />} />
-          <Route path="blogs" element={<Blogs title Blogs />} />
         </Routes>
       </AuthProvider>
     </>
